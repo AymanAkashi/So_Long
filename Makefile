@@ -14,10 +14,10 @@ LIBFT_A = libft.a
 OBJS_DIR = obj/
 OBJS_BONUS_DIR = obj_bonus/
 LIBFT  = $(addprefix $(LIBF_DIR), $(LIBFT_A))
-SRCS_BONUS = main.c check_map.c get_next_line_bonus.c get_next_line_utils_bonus.c free.c render.c enemy.c counter.c read_map.c define_map.c color.c map_init.c \
+SRCS_BONUS = main.c check_map.c get_next_line_bonus.c get_next_line_utils_bonus.c free.c render.c enemy.c counter.c read_map.c define_map.c map_init.c \
 				open_img.c move.c key_move.c game_init.c animation.c check_char.c enemy_move.c loop.c reset.c starting.c color_print.c
 
-SRCS = main.c check_map.c get_next_line_bonus.c get_next_line_utils_bonus.c free.c render.c counter.c read_map.c define_map.c color.c map_init.c \
+SRCS = main.c check_map.c get_next_line_bonus.c get_next_line_utils_bonus.c free.c render.c counter.c read_map.c define_map.c map_init.c \
 		open_img.c move.c game_init.c check_char.c loop.c reset.c starting.c color_print.c
 
 OBJS :=$(SRCS:.c=.o)
@@ -87,12 +87,13 @@ $(OBJS_BONUS_DIR)%.o: ${BONUS_DIR}/%.c ${HEADER_BONUS}
 clean:
 		@echo $(CURSIVE)$(YELLOW) " 						- Removing object files..." $(NONE)
 		@rm -rf $(addprefix $(OBJS_DIR), $(OBJS)) $(addprefix $(OBJS_BONUS_DIR), $(OBJS_BONUS))
+		@rm -rf  $(OBJS_DIR) $(OBJS_BONUS_DIR)
 
 fclean: clean
 		@echo $(CURSIVE)$(YELLOW) " 						- Removing $(NAME)..." $(NONE)
 		@rm -rf $(NAME) $(NAME_BONUS)
 		@echo $(CURSIVE)$(YELLOW) " 						- Removing object libft..." $(NONE)
-		@make -C $(LIBF_DIR) fclean 
+		@make -C $(LIBF_DIR) fclean
 		@echo $(NONE) ""
 norm: 
 		@echo $(CURSIVE)$(YELLOW) "			check_normenette...."

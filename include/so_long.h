@@ -6,7 +6,7 @@
 /*   By: aaggoujj <aaggoujj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 09:27:42 by aaggoujj          #+#    #+#             */
-/*   Updated: 2022/01/21 18:39:40 by aaggoujj         ###   ########.fr       */
+/*   Updated: 2022/02/09 11:37:22 by aaggoujj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,6 @@
 # include"../libft/libft.h"
 # include"get_next_line_bonus.h"
 
-typedef struct s_data
-{
-	void	*imgs;
-	char	*addr;
-	int		bits_per_pixel;
-	int		line_length;
-	int		endian;
-	void	*mlx_ptr;
-	void	*mlx_win;
-	int		w;
-	int		h;
-}		t_data;
 
 typedef enum e_bool
 {
@@ -132,15 +120,10 @@ typedef struct s_game
 	t_collect	collect_img;
 	t_size		win_size;
 	void		*door_close;
-	void		*door_frame;
 	void		*door_open;
 	void		*wall;
 	t_player	player;
 	int			count;
-	t_enemy		*enemy;
-	void		*enemy_0;
-	void		*enemy_1;
-	void		*enemy_2;
 	void		*en_current_img;
 }			t_game;
 

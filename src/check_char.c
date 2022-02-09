@@ -6,19 +6,19 @@
 /*   By: aaggoujj <aaggoujj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 02:52:21 by aaggoujj          #+#    #+#             */
-/*   Updated: 2022/01/21 06:06:12 by aaggoujj         ###   ########.fr       */
+/*   Updated: 2022/02/09 11:39:43 by aaggoujj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long_bonus.h"
-
+//check all the charachte on the map
 int	check_char(char c)
 {
 	if (c == 'P' || c == 'E' || c == 'C' || c == '0' || c == '1' || c == '\n')
 		return (1);
 	return (0);
 }
-
+//checking number of player
 int	check_player(char **str)
 {
 	int	i;
@@ -40,7 +40,7 @@ int	check_player(char **str)
 	}
 	return (player);
 }
-
+//check how many exit in the map
 int	check_exit(char **str)
 {
 	int	i;
@@ -62,7 +62,7 @@ int	check_exit(char **str)
 	}
 	return (exit);
 }
-
+//check how many collectebl 
 int	check_collect(char **str)
 {
 	int	i;
@@ -84,7 +84,7 @@ int	check_collect(char **str)
 	}
 	return (collect);
 }
-
+//check numbers of all element C P E
 void	check_one(char **str)
 {
 	if (check_collect(str) == 0)

@@ -6,7 +6,7 @@
 /*   By: aaggoujj <aaggoujj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 17:04:48 by aaggoujj          #+#    #+#             */
-/*   Updated: 2022/01/18 17:28:53 by aaggoujj         ###   ########.fr       */
+/*   Updated: 2022/02/09 11:47:10 by aaggoujj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_check	define_num(char c)
 		return (Collect);
 	return (Empty);
 }
-
+//set position of the player & calculation number of collectebl
 void	gen_tile(t_type *tile, t_game *game)
 {
 	if (tile->type == Player)
@@ -32,7 +32,7 @@ void	gen_tile(t_type *tile, t_game *game)
 	else if (tile->type == Collect)
 		game->collect++;
 }
-
+//set all position of anything with position of UP,DOWN,RIGHT,LIFT
 void	set_map(t_type **tilemap, int x, int y)
 {
 	tilemap[y][x].or_type = tilemap[y][x].type;
@@ -46,7 +46,7 @@ void	set_map(t_type **tilemap, int x, int y)
 			tilemap[y][x].left = &tilemap[y][x - 1];
 	tilemap[y][x].right = &tilemap[y][x + 1];
 }
-
+//allocation of data struct t_type 
 t_type	**alloca_type(char **map)
 {
 	int		i;
@@ -67,7 +67,7 @@ t_type	**alloca_type(char **map)
 	tilemap[i] = NULL;
 	return (tilemap);
 }
-
+//generation of the map
 t_type	**gen_map(char **map, t_game *game)
 {
 	t_type	**tilemap;

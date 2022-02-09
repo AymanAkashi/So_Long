@@ -6,12 +6,12 @@
 /*   By: aaggoujj <aaggoujj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/14 16:47:05 by aaggoujj          #+#    #+#             */
-/*   Updated: 2022/01/21 00:59:22 by aaggoujj         ###   ########.fr       */
+/*   Updated: 2022/02/09 11:43:07 by aaggoujj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/so_long_bonus.h"
-
+//checker of charachters
 void	check_all(char **str)
 {
 	int	i;
@@ -31,7 +31,7 @@ void	check_all(char **str)
 	}
 	check_one(str);
 }
-
+//verifie map is rectangle
 int	is_rect(char **str)
 {
 	int	i;
@@ -74,30 +74,7 @@ int	is_one(char *str)
 	return (1);
 }
 
-// int check_null(char **str)
-// {
-// 	int i;
-// 	int j;
-// 	int len;
-// 	len = counter_y(str);
-// 	i = 0;
-// 	while(i <= len)
-// 	{
-// 		j = 0;
-// 		while(str[i][j])
-// 			{
-// 				if(i + 1 <= len)
-// 					if((str[i][j] == '\n' && str[i][j + 1] == '\0' &&
-						// ft_isascii(str[i + 1][0])) ||
-// 						(str[i][j] == '\0' && ft_isascii(str[i + 1][0])))
-// 					return (0);
-// 				j++;
-// 			}
-// 			i++;
-// 	}
-// 	return (1);
-// }
-
+//verifie map is surround with wall
 int	is_wall(char **str)
 {
 	int	i;
@@ -125,7 +102,7 @@ int	is_wall(char **str)
 		ft_exit_ps("Wrong Map !\n", 1);
 	return (1);
 }
-
+//verifie name of path
 void	check_name(char *str)
 {
 	char	*dest;

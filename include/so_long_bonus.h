@@ -6,7 +6,7 @@
 /*   By: aaggoujj <aaggoujj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 09:27:42 by aaggoujj          #+#    #+#             */
-/*   Updated: 2022/01/21 18:39:55 by aaggoujj         ###   ########.fr       */
+/*   Updated: 2022/02/09 14:00:29 by aaggoujj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # define IMAGE_SIZE 50
 
 //high speed of enemy begin in 7-9-14-18-21...
-# define SPEED 7
+# define SPEED 8
 
 # include<stdio.h>
 # include<unistd.h>
